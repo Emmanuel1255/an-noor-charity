@@ -5,7 +5,7 @@ const executivePositions = [
   {
     icon: Shield,
     title: 'Chief Executive Officer (CEO)',
-    name: 'Umarr Jalloh',
+    // name: 'Umarr Jalloh',
     description: 'Leads the organization and appoints meeting chairs. Provides strategic direction and overall leadership.',
     responsibilities: [
       'Strategic planning and organizational leadership',
@@ -114,11 +114,11 @@ export function Leadership() {
                   <CardTitle className="text-lg text-neutral-900">
                     {position.title}
                   </CardTitle>
-                  {position.name && (
+                  {/* {position.name && (
                     <div className="text-primary-700 text-sm font-medium mt-1">
                       {position.name}
                     </div>
-                  )}
+                  )} */}
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-neutral-600 text-sm leading-relaxed">

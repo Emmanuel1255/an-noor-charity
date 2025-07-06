@@ -20,24 +20,42 @@ const programCategories = [
     bgColor: 'bg-cyan-50',
     borderColor: 'border-cyan-200'
   },
+  // {
+  //   icon: Users, 
+  //   title: 'Food Feeding Program (Ramadan)',
+  //   description: 'Providing nutritious iftar and suhoor meals to families and individuals during the holy month of Ramadan.',
+  //   programs: [
+  //     'Daily Iftar Meal Distribution',
+  //     'Suhoor Packages for Families',
+  //     'Community Ramadan Kitchens',
+  //     'Food Basket Distribution'
+  //   ],
+  //   stats: {
+  //     mealsServed: '10,000+ meals',
+  //     families: '500+ families',
+  //     volunteers: '120 volunteers'
+  //   },
+  //   color: 'from-orange-500 to-orange-600',
+  //   bgColor: 'bg-orange-50',
+  //   borderColor: 'border-orange-200'
+  // },
   {
-    icon: Users, 
-    title: 'Food Feeding Program (Ramadan)',
-    description: 'Providing nutritious iftar and suhoor meals to families and individuals during the holy month of Ramadan.',
+    icon: Users, // Optionally use a crescent or food icon if available
+    title: 'Ramadan Contribution',
+    description: 'Supporting the community during Ramadan through charity, food distribution, and special Ramadan programs.',
     programs: [
       'Daily Iftar Meal Distribution',
       'Suhoor Packages for Families',
-      'Community Ramadan Kitchens',
       'Food Basket Distribution'
     ],
     stats: {
-      mealsServed: '10,000+ meals',
-      families: '500+ families',
-      volunteers: '120 volunteers'
+      beneficiaries: '2,000+ individuals',
+      mealsServed: '5,000+ meals',
+      familiesSupported: '400 families'
     },
-    color: 'from-orange-500 to-orange-600',
-    bgColor: 'bg-orange-50',
-    borderColor: 'border-orange-200'
+    color: 'from-yellow-500 to-yellow-600',
+    bgColor: 'bg-yellow-50',
+    borderColor: 'border-yellow-200'
   },
   {
     icon: AlertTriangle,
@@ -115,25 +133,7 @@ const programCategories = [
     bgColor: 'bg-amber-50',
     borderColor: 'border-amber-200'
   },
-  {
-    icon: Users, // Optionally use a crescent or food icon if available
-    title: 'Ramadan Contribution',
-    description: 'Supporting the community during Ramadan through charity, food distribution, and special Ramadan programs.',
-    programs: [
-      'Ramadan Food Baskets',
-      'Iftar Sponsorship',
-      'Zakat al-Fitr Distribution',
-      'Community Taraweeh Support'
-    ],
-    stats: {
-      beneficiaries: '2,000+ individuals',
-      mealsServed: '5,000+ meals',
-      familiesSupported: '400 families'
-    },
-    color: 'from-yellow-500 to-yellow-600',
-    bgColor: 'bg-yellow-50',
-    borderColor: 'border-yellow-200'
-  },
+  
 ]
 
 export function ProgramsOverview() {
