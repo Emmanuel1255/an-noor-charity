@@ -46,38 +46,38 @@ const islamicValues = [
   }
 ]
 
-const operationalPrinciples = [
-  {
-    title: 'Community-Centered Approach',
-    description: 'We work with communities, not for them, ensuring local ownership and sustainable solutions.',
-    icon: '🤝'
-  },
-  {
-    title: 'Dignity Preservation',
-    description: 'Every person we serve is treated with respect and dignity, maintaining their self-worth throughout the process.',
-    icon: '🌟'
-  },
-  {
-    title: 'Sustainable Impact',
-    description: 'We focus on long-term solutions that continue to benefit communities well beyond our initial intervention.',
-    icon: '🌱'
-  },
-  {
-    title: 'Cultural Sensitivity',
-    description: 'Respecting local customs, traditions, and beliefs while delivering aid and support.',
-    icon: '🌍'
-  },
-  {
-    title: 'Innovation & Excellence',
-    description: 'Continuously improving our methods and seeking innovative solutions to complex challenges.',
-    icon: '💡'
-  },
-  {
-    title: 'Collaborative Spirit',
-    description: 'Working with other organizations, governments, and stakeholders to maximize positive impact.',
-    icon: '🤲'
-  }
-]
+// const operationalPrinciples = [
+//   {
+//     title: 'Community-Centered Approach',
+//     description: 'We work with communities, not for them, ensuring local ownership and sustainable solutions.',
+//     icon: '🤝'
+//   },
+//   {
+//     title: 'Dignity Preservation',
+//     description: 'Every person we serve is treated with respect and dignity, maintaining their self-worth throughout the process.',
+//     icon: '🌟'
+//   },
+//   {
+//     title: 'Sustainable Impact',
+//     description: 'We focus on long-term solutions that continue to benefit communities well beyond our initial intervention.',
+//     icon: '🌱'
+//   },
+//   {
+//     title: 'Cultural Sensitivity',
+//     description: 'Respecting local customs, traditions, and beliefs while delivering aid and support.',
+//     icon: '🌍'
+//   },
+//   {
+//     title: 'Innovation & Excellence',
+//     description: 'Continuously improving our methods and seeking innovative solutions to complex challenges.',
+//     icon: '💡'
+//   },
+//   {
+//     title: 'Collaborative Spirit',
+//     description: 'Working with other organizations, governments, and stakeholders to maximize positive impact.',
+//     icon: '🤲'
+//   }
+// ]
 
 export function Values() {
   return (
