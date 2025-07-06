@@ -18,13 +18,11 @@ const featuredPrograms = [
     description: 'Construction of a new borehole in underserved communities around Freetown, providing clean drinking water access to over 100 people.',
     objectives: [
       'Build a new borehole in target communities',
-      'Train local maintenance teams',
-      'Conduct hygiene education workshops'
+      'Train local maintenance teams'
     ],
     achievements: [
       '1 borehole completed and operational',
-      'people now have clean water access',
-      'hygiene education sessions conducted'
+      'people now have clean water access'
     ],
     images: [
       './programs/borehole1.jpeg',

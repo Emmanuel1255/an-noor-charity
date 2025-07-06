@@ -10,8 +10,6 @@ const programCategories = [
       'Water Well Construction',
       'Water System Maintenance',
       'Sanitation Projects',
-      'Hygiene Education',
-      'Water Quality Testing'
     ],
     stats: {
       beneficiaries: '800+ people',
@@ -30,8 +28,7 @@ const programCategories = [
       'Daily Iftar Meal Distribution',
       'Suhoor Packages for Families',
       'Community Ramadan Kitchens',
-      'Food Basket Distribution',
-      'Eid Food Hampers'
+      'Food Basket Distribution'
     ],
     stats: {
       mealsServed: '10,000+ meals',
@@ -69,9 +66,7 @@ const programCategories = [
     programs: [
       'School Fee Sponsorship',
       'Educational Supplies Distribution',
-      'Scholarship Programs',
-      'Adult Literacy Classes',
-      'Vocational Training'
+      'Scholarship Programs'
     ],
     stats: {
       beneficiaries: '320 students',
@@ -89,9 +84,7 @@ const programCategories = [
     programs: [
       'Orphanage Support',
       'Foster Family Programs',
-      'Educational Sponsorship',
-      'Psychological Support',
-      'Life Skills Training'
+      'Educational Sponsorship'
     ],
     stats: {
       beneficiaries: '85 children',
@@ -104,25 +97,43 @@ const programCategories = [
   },
   {
     icon: Users,
-    title: 'Community Development',
-    description: 'Long-term projects that strengthen communities and create sustainable change',
+    title: 'Islamic Community Development',
+    description: 'Fostering strong Islamic communities through mosque construction, Islamic education, and charitable initiatives.',
     programs: [
-      'Skills Training Programs',
-      'Microfinance Initiatives',
-      'Infrastructure Development',
-      'Women Empowerment',
-      'Youth Leadership Programs'
+      'Mosque Construction',
+      'Islamic School Establishment',
+      'Qur\'an Learning',
+      'Community Iftar Programs',
+      'Zakat & Sadaqah Distribution'
     ],
     stats: {
-      beneficiaries: '12 communities',
-      projects: '25 projects',
-      trainees: '180 trainees'
+      beneficiaries: '15 communities',
+      projects: '30 projects',
+      trainees: '250 students'
     },
     color: 'from-amber-500 to-amber-600',
     bgColor: 'bg-amber-50',
     borderColor: 'border-amber-200'
-  }
-  
+  },
+  {
+    icon: Users, // Optionally use a crescent or food icon if available
+    title: 'Ramadan Contribution',
+    description: 'Supporting the community during Ramadan through charity, food distribution, and special Ramadan programs.',
+    programs: [
+      'Ramadan Food Baskets',
+      'Iftar Sponsorship',
+      'Zakat al-Fitr Distribution',
+      'Community Taraweeh Support'
+    ],
+    stats: {
+      beneficiaries: '2,000+ individuals',
+      mealsServed: '5,000+ meals',
+      familiesSupported: '400 families'
+    },
+    color: 'from-yellow-500 to-yellow-600',
+    bgColor: 'bg-yellow-50',
+    borderColor: 'border-yellow-200'
+  },
 ]
 
 export function ProgramsOverview() {
