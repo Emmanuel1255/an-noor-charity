@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { Send, CheckCircle, User, Mail, Phone, MessageSquare, Users, Hand, Building, Calendar } from 'lucide-react'
+import { Send, CheckCircle, MessageSquare, Hand, Users } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 

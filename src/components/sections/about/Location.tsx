@@ -1,7 +1,6 @@
-import { MapPin, Phone, Mail, Clock, Users, Globe } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
-import { Link } from 'react-router-dom'
 
 const contactInfo = [
   {
@@ -34,12 +33,12 @@ const officeHours = [
   { day: 'Sunday', hours: 'Closed' }
 ]
 
-const communityStats = [
-  { label: 'Local Families Served', value: '250+' },
-  { label: 'Community Partners', value: '15+' },
-  { label: 'Local Programs', value: '8' },
-  { label: 'Years in Sierra Leone', value: '5+' }
-]
+// const communityStats = [
+//   { label: 'Local Families Served', value: '250+' },
+//   { label: 'Community Partners', value: '15+' },
+//   { label: 'Local Programs', value: '8' },
+//   { label: 'Years in Sierra Leone', value: '5+' }
+// ]
 
 export function Location() {
   return (

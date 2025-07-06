@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Heart, Users, Globe } from 'lucide-react'
+import { ArrowRight, Heart, Globe } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
 export function Hero() {

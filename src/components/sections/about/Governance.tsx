@@ -1,4 +1,4 @@
-import { FileText, Calendar, Vote, Shield, DollarSign, Users } from 'lucide-react'
+import { FileText, Calendar, Vote, Shield, Users } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 
 const meetingTypes = [

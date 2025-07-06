@@ -1,4 +1,4 @@
-import { BookOpen, Users, Globe, Heart } from 'lucide-react'
+import { BookOpen, Users, Heart } from 'lucide-react'
 
 export function Hero() {
     return (

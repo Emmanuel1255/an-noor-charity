@@ -160,7 +160,7 @@ export function ProgramsImpact() {
                     </tr>
                   </thead>
                   <tbody>
-                    {yearlyImpact.map((year, index) => (
+                    {yearlyImpact.map((year) => (
                       <tr key={year.year} className="border-b border-neutral-100 hover:bg-neutral-50">
                         <td className="py-4 px-4 font-semibold text-neutral-900">{year.year}</td>
                         <td className="py-4 px-4 text-neutral-700">{year.programs}</td>
