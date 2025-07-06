@@ -1,4 +1,4 @@
-import { BookOpen, Users, Heart } from 'lucide-react'
+// import { BookOpen, Users, Heart } from 'lucide-react'
 
 export function Hero() {
     return (
@@ -29,7 +29,7 @@ export function Hero() {
                     </div>
 
                     {/* Quick Stats */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-8">
+                    {/* <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-8">
                         <div className="text-center space-y-2">
                             <div className="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-3">
                                 <Users className="w-8 h-8 text-white" />
@@ -52,7 +52,7 @@ export function Hero() {
                             <div className="text-3xl font-bold text-accent-400">100%</div>
                             <div className="text-sm text-neutral-300">Transparency</div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

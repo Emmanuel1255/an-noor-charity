@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Star, Heart, User, AlertTriangle, GraduationCap, Stethoscope } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
-import { Button } from '@/components/ui/Button'
 
 const donationCategories = [
   {
@@ -87,9 +86,9 @@ const donationCategories = [
   {
     id: 'education',
     icon: GraduationCap,
-    title: 'Education Support',
+    title: 'Islamic Education Support',
     arabic: 'دعم التعليم',
-    description: 'Supporting education and knowledge acquisition for underprivileged children',
+    description: 'Supporting Islamic education and knowledge acquisition for underprivileged children',
     details: [
       'School fees and supplies',
       'Scholarship programs',
@@ -127,26 +126,18 @@ const donationCategories = [
 ]
 
 export function DonationCategories() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+  const [selectedCategory] = useState<string | null>(null)
 
-  const selectCategory = (categoryId: string) => {
-    setSelectedCategory(categoryId)
-    // Scroll to donation form and pre-select category
-    setTimeout(() => {
-      document.getElementById('donation-form')?.scrollIntoView({ behavior: 'smooth' })
-      // Trigger category selection in form
-      window.dispatchEvent(new CustomEvent('selectDonationCategory', { detail: categoryId }))
-    }, 300)
-  }
+  
 
   return (
-    <section id="donation-categories" className="section-padding bg-neutral-50">
+    <section id="donation-categories" className="section-padding bg-neutral-50 -pb-[6rem]">
       <div className="container">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
+          {/* <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
             Choose Your Donation Type
-          </h2>
+          </h2> */}
           <p className="text-lg text-neutral-600 leading-relaxed">
             Islam offers various forms of charity, each with its own purpose and reward. 
             Choose the type that best matches your intention and circumstances.
@@ -161,7 +152,7 @@ export function DonationCategories() {
               className={`h-full hover-lift hover:shadow-xl transition-all duration-300 cursor-pointer group ${
                 selectedCategory === category.id ? 'ring-2 ring-primary-500 shadow-lg' : ''
               }`}
-              onClick={() => selectCategory(category.id)}
+              // onClick={() => selectCategory(category.id)}
             >
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-4">
@@ -175,11 +166,7 @@ export function DonationCategories() {
                 <CardTitle className="text-xl group-hover:text-primary-600 transition-colors">
                   {category.title}
                 </CardTitle>
-                {category.minAmount > 0 && (
-                  <div className="text-sm text-neutral-500">
-                    Minimum: ${category.minAmount}
-                  </div>
-                )}
+                
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-neutral-600 text-sm leading-relaxed">
@@ -204,7 +191,7 @@ export function DonationCategories() {
                   </p>
                 </div>
                 
-                <Button 
+                {/* <Button 
                   className="w-full group-hover:shadow-md transition-all"
                   onClick={(e) => {
                     e.stopPropagation()
@@ -212,7 +199,7 @@ export function DonationCategories() {
                   }}
                 >
                   Donate {category.title}
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
           ))}

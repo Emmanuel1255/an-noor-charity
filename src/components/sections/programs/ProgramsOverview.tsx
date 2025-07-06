@@ -1,4 +1,4 @@
-import { AlertTriangle, GraduationCap, Stethoscope, Home, Users, Droplets } from 'lucide-react'
+import { AlertTriangle, GraduationCap, Home, Users, Droplets } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 
 const programCategories = [
@@ -23,6 +23,26 @@ const programCategories = [
     borderColor: 'border-cyan-200'
   },
   {
+    icon: Users, 
+    title: 'Food Feeding Program (Ramadan)',
+    description: 'Providing nutritious iftar and suhoor meals to families and individuals during the holy month of Ramadan.',
+    programs: [
+      'Daily Iftar Meal Distribution',
+      'Suhoor Packages for Families',
+      'Community Ramadan Kitchens',
+      'Food Basket Distribution',
+      'Eid Food Hampers'
+    ],
+    stats: {
+      mealsServed: '10,000+ meals',
+      families: '500+ families',
+      volunteers: '120 volunteers'
+    },
+    color: 'from-orange-500 to-orange-600',
+    bgColor: 'bg-orange-50',
+    borderColor: 'border-orange-200'
+  },
+  {
     icon: AlertTriangle,
     title: 'Emergency Relief',
     description: 'Immediate response to crises, natural disasters, and urgent humanitarian needs',
@@ -44,8 +64,8 @@ const programCategories = [
   },
   {
     icon: GraduationCap,
-    title: 'Education Support',
-    description: 'Ensuring access to quality education and knowledge for underprivileged children',
+    title: 'Islamic Education Support',
+    description: 'Ensuring access to quality Islamic education and knowledge for underprivileged children',
     programs: [
       'School Fee Sponsorship',
       'Educational Supplies Distribution',
@@ -61,26 +81,6 @@ const programCategories = [
     color: 'from-blue-500 to-blue-600',
     bgColor: 'bg-blue-50',
     borderColor: 'border-blue-200'
-  },
-  {
-    icon: Stethoscope,
-    title: 'Healthcare Access',
-    description: 'Providing medical care and health services to communities in need',
-    programs: [
-      'Mobile Medical Clinics',
-      'Medicine Distribution',
-      'Health Screenings',
-      'Surgical Support',
-      'Maternal Health Programs'
-    ],
-    stats: {
-      beneficiaries: '200+ patients',
-      treatments: '156 treatments',
-      clinics: '8 mobile clinics'
-    },
-    color: 'from-green-500 to-green-600',
-    bgColor: 'bg-green-50',
-    borderColor: 'border-green-200'
   },
   {
     icon: Home,
@@ -187,7 +187,7 @@ export function ProgramsOverview() {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl p-8 md:p-12">
             <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-4">
               Making a Difference Together
@@ -212,7 +212,7 @@ export function ProgramsOverview() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

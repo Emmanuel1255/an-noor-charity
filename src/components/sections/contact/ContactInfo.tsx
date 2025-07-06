@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, Globe, Users, Calendar, Headphones } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock} from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 
 const contactMethods = [
@@ -8,8 +8,7 @@ const contactMethods = [
     primary: 'info@annoorcharity.org',
     secondary: 'For general inquiries and information',
     additional: [
-      { label: 'Donations', value: 'donate@annoorcharity.org' },
-      { label: 'Partnerships', value: 'partners@annoorcharity.org' },
+      { label: 'Partnerships', value: 'info@annoorcharity.org' },
       { label: 'Media Inquiries', value: 'media@annoorcharity.org' }
     ],
     color: 'from-blue-500 to-blue-600',
@@ -22,8 +21,7 @@ const contactMethods = [
     secondary: 'Available during business hours',
     additional: [
       { label: 'Emergency Hotline', value: '+232 XX XXX XXXX' },
-      { label: 'WhatsApp', value: '+232 XX XXX XXXX' },
-      { label: 'Fax', value: '+232 XX XXX XXXX' }
+      { label: 'WhatsApp', value: '+232 XX XXX XXXX' }
     ],
     color: 'from-green-500 to-green-600',
     bgColor: 'bg-green-50'
@@ -34,7 +32,6 @@ const contactMethods = [
     primary: '41 Goderich Street',
     secondary: 'Freetown, Western Area, Sierra Leone',
     additional: [
-      { label: 'Postal Code', value: 'XXXX' },
       { label: 'District', value: 'Western Area Urban' },
       { label: 'Country', value: 'Sierra Leone' }
     ],
@@ -56,36 +53,7 @@ const contactMethods = [
   }
 ]
 
-const departments = [
-  {
-    icon: Users,
-    name: 'Programs Department',
-    description: 'Questions about our charitable programs and beneficiary services',
-    contact: 'programs@annoorcharity.org',
-    phone: '+232 XX XXX XXXX'
-  },
-  {
-    icon: Globe,
-    name: 'Partnerships & Outreach',
-    description: 'Corporate partnerships, NGO collaborations, and community outreach',
-    contact: 'partnerships@annoorcharity.org',
-    phone: '+232 XX XXX XXXX'
-  },
-  {
-    icon: Calendar,
-    name: 'Events & Volunteering',
-    description: 'Volunteer opportunities, events, and community engagement activities',
-    contact: 'volunteer@annoorcharity.org',
-    phone: '+232 XX XXX XXXX'
-  },
-  {
-    icon: Headphones,
-    name: 'Donor Relations',
-    description: 'Donation inquiries, receipts, and donor support services',
-    contact: 'donors@annoorcharity.org',
-    phone: '+232 XX XXX XXXX'
-  }
-]
+
 
 export function ContactInfo() {
   return (
@@ -103,7 +71,7 @@ export function ContactInfo() {
         </div>
 
         {/* Main Contact Methods */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
           {contactMethods.map((method, index) => (
             <Card key={index} className="h-full hover-lift hover:shadow-xl transition-all duration-300">
               <CardHeader className="pb-4">
@@ -137,50 +105,10 @@ export function ContactInfo() {
           ))}
         </div>
 
-        {/* Departments */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-neutral-900 mb-8 text-center">
-            Department Contacts
-          </h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {departments.map((dept, index) => (
-              <Card key={index} className="hover-lift hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <dept.icon className="w-6 h-6 text-primary-600" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-neutral-900 mb-2">
-                        {dept.name}
-                      </h4>
-                      <p className="text-neutral-600 text-sm leading-relaxed mb-3">
-                        {dept.description}
-                      </p>
-                      <div className="space-y-1">
-                        <div className="flex items-center text-sm">
-                          <Mail className="w-4 h-4 text-primary-600 mr-2" />
-                          <a href={`mailto:${dept.contact}`} className="text-primary-600 hover:text-primary-700 transition-colors">
-                            {dept.contact}
-                          </a>
-                        </div>
-                        <div className="flex items-center text-sm">
-                          <Phone className="w-4 h-4 text-primary-600 mr-2" />
-                          <a href={`tel:${dept.phone}`} className="text-primary-600 hover:text-primary-700 transition-colors">
-                            {dept.phone}
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+
 
         {/* Emergency Contact */}
-        <div className="bg-gradient-to-r from-red-500 to-red-600 rounded-2xl p-8 md:p-12 text-white text-center">
+        {/* <div className="bg-gradient-to-r from-red-500 to-red-600 rounded-2xl p-8 md:p-12 text-white text-center">
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto">
               <Phone className="w-8 h-8 text-white" />
@@ -209,7 +137,7 @@ export function ContactInfo() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

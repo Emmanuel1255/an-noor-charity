@@ -1,6 +1,5 @@
 import { Heart, Users, Globe, Star } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { Link } from 'react-router-dom'
 
 export function ProgramsHero() {
   const scrollToPrograms = () => {
@@ -56,20 +55,11 @@ export function ProgramsHero() {
               <Star className="mr-2 w-5 h-5" />
               Explore Programs
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="bg-white/10 border-white/30 text-white hover:bg-white/20"
-              
-            >
-              <Link to="/donate">
-                Support Our Work
-              </Link>
-            </Button>
+            
           </div>
 
           {/* Quick Program Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/20">
+          {/* <div className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-8 border-t border-white/20">
             <div className="text-center">
               <div className="text-3xl font-bold text-accent-400">15+</div>
               <div className="text-sm text-blue-200">Active Programs</div>
@@ -78,15 +68,12 @@ export function ProgramsHero() {
               <div className="text-3xl font-bold text-accent-400">6</div>
               <div className="text-sm text-blue-200">Focus Areas</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-accent-400">500+</div>
-              <div className="text-sm text-blue-200">Beneficiaries</div>
-            </div>
+            
             <div className="text-center">
               <div className="text-3xl font-bold text-accent-400">10+</div>
               <div className="text-sm text-blue-200">Countries</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

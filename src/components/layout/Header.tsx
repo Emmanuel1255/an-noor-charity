@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Heart } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
+// import { Button } from '@/components/ui/Button'
 import { cn } from '@/utils/cn'
 
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Programs', href: '/programs' },
-  { name: 'Donate', href: '/donate' },
+  // { name: 'Donate', href: '/donate' },
   // { name: 'News', href: '/news' },
   { name: 'Contact', href: '/contact' },
 ]
@@ -64,14 +64,14 @@ export function Header() {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
+          {/* <div className="hidden lg:flex items-center space-x-4">
             <Button variant="outline" size="sm">
               Join Us
             </Button>
             <Button size="sm">
               Donate Now
             </Button>
-          </div>
+          </div> */}
 
           {/* Mobile menu button */}
           <button
@@ -102,14 +102,14 @@ export function Header() {
                   {item.name}
                 </Link>
               ))}
-              <div className="flex flex-col space-y-3 pt-4 border-t border-neutral-200">
+              {/* <div className="flex flex-col space-y-3 pt-4 border-t border-neutral-200">
                 <Button variant="outline" size="sm">
                   Join Us
                 </Button>
                 <Button size="sm">
                   Donate Now
                 </Button>
-              </div>
+              </div> */}
             </nav>
           </div>
         )}

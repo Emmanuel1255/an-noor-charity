@@ -1,33 +1,30 @@
 import { useState } from 'react'
 import { Calendar, MapPin, Users, Target, ArrowRight, CheckCircle} from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
-import { Button } from '@/components/ui/Button'
 
 const featuredPrograms = [
   {
     id: 'water-wells-freetown',
     title: 'Borehole Project - Kenema',
     category: 'Water & Sanitation',
-    status: 'Active',
+    status: 'Completed',
     startDate: '2024-01-15',
     endDate: '2024-12-31',
     location: 'Kenema, Sierra Leone',
     beneficiaries: 100,
-    progress: 75,
+    progress: 100,
     totalBudget: 15000,
     raised: 11250,
     description: 'Construction of a new borehole in underserved communities around Freetown, providing clean drinking water access to over 100 people.',
     objectives: [
       'Build a new borehole in target communities',
-      'Install solar-powered water pumps',
       'Train local maintenance teams',
       'Conduct hygiene education workshops'
     ],
     achievements: [
       '1 borehole completed and operational',
-      '100 people now have clean water access',
-      '15 local technicians trained',
-      '20 hygiene education sessions conducted'
+      'people now have clean water access',
+      'hygiene education sessions conducted'
     ],
     images: [
       './programs/borehole1.jpeg',
@@ -200,7 +197,7 @@ export function FeaturedPrograms() {
                     </div>
                     <div className="flex items-center">
                       <Users className="w-3 h-3 mr-1" />
-                      {program.beneficiaries} beneficiaries
+                      Kenema people
                     </div>
                   </div>
                   
@@ -258,7 +255,6 @@ export function FeaturedPrograms() {
                 <div className="flex space-x-1 bg-neutral-100 rounded-lg p-1">
                   {[
                     { id: 'overview', label: 'Overview' },
-                    { id: 'progress', label: 'Progress' },
                     { id: 'gallery', label: 'Gallery' }
                   ].map((tab) => (
                     <button
@@ -319,7 +315,7 @@ export function FeaturedPrograms() {
                     </div>
 
                     {/* Key Stats */}
-                    <div className="grid grid-cols-3 gap-4 p-4 bg-primary-50 rounded-lg">
+                    {/* <div className="grid grid-cols-3 gap-4 p-4 bg-primary-50 rounded-lg">
                       <div className="text-center">
                         <div className="text-2xl font-bold text-primary-600">{selectedProgram.beneficiaries}</div>
                         <div className="text-xs text-neutral-600">Beneficiaries</div>
@@ -332,7 +328,7 @@ export function FeaturedPrograms() {
                         <div className="text-2xl font-bold text-primary-600">{selectedProgram.progress}%</div>
                         <div className="text-xs text-neutral-600">Complete</div>
                       </div>
-                    </div>
+                    </div> */}
                     {/* image */}
                     <div className="flex justify-center">
                       <img src={selectedProgram.images[0]} alt={selectedProgram.title} className="max-w-full h-auto" />
@@ -341,92 +337,7 @@ export function FeaturedPrograms() {
                 )}
 
                 {/* Progress Tab */}
-                {activeTab === 'progress' && (
-                  <div className="space-y-6">
-                    {/* Overall Progress */}
-                    <div>
-                      <h4 className="font-semibold text-neutral-900 mb-4">Overall Progress</h4>
-                      <div className="space-y-4">
-                        <div>
-                          <div className="flex justify-between text-sm mb-2">
-                            <span>Project Completion</span>
-                            <span>{selectedProgram.progress}%</span>
-                          </div>
-                          <div className="w-full bg-neutral-200 rounded-full h-3">
-                            <div 
-                              className="bg-primary-600 h-3 rounded-full transition-all duration-300"
-                              style={{ width: `${selectedProgram.progress}%` }}
-                            ></div>
-                          </div>
-                        </div>
-                        
-                        <div>
-                          <div className="flex justify-between text-sm mb-2">
-                            <span>Funding Progress</span>
-                            <span>{Math.round((selectedProgram.raised / selectedProgram.totalBudget) * 100)}%</span>
-                          </div>
-                          <div className="w-full bg-neutral-200 rounded-full h-3">
-                            <div 
-                              className="bg-green-600 h-3 rounded-full transition-all duration-300"
-                              style={{ width: `${(selectedProgram.raised / selectedProgram.totalBudget) * 100}%` }}
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
 
-                    {/* Financial Breakdown */}
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="bg-neutral-50 rounded-lg p-4">
-                        <h5 className="font-medium text-neutral-900 mb-3">Financial Status</h5>
-                        <div className="space-y-2 text-sm">
-                          <div className="flex justify-between">
-                            <span>Total Budget:</span>
-                            <span className="font-medium">${selectedProgram.totalBudget.toLocaleString()}</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span>Amount Raised:</span>
-                            <span className="font-medium text-green-600">${selectedProgram.raised.toLocaleString()}</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span>Remaining:</span>
-                            <span className="font-medium text-red-600">${(selectedProgram.totalBudget - selectedProgram.raised).toLocaleString()}</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="bg-neutral-50 rounded-lg p-4">
-                        <h5 className="font-medium text-neutral-900 mb-3">Timeline</h5>
-                        <div className="space-y-2 text-sm">
-                          <div className="flex justify-between">
-                            <span>Start Date:</span>
-                            <span>{new Date(selectedProgram.startDate).toLocaleDateString()}</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span>End Date:</span>
-                            <span>{selectedProgram.endDate === 'Ongoing' ? 'Ongoing' : new Date(selectedProgram.endDate).toLocaleDateString()}</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span>Duration:</span>
-                            <span>
-                              {selectedProgram.endDate === 'Ongoing' 
-                                ? 'Ongoing Project' 
-                                : `${Math.ceil((new Date(selectedProgram.endDate).getTime() - new Date(selectedProgram.startDate).getTime()) / (1000 * 60 * 60 * 24 * 30))} months`
-                              }
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Support Button */}
-                    <Button className="w-full md:w-auto">
-                      <a href={`/donate?program=${selectedProgram.id}`}>
-                        Support This Program
-                      </a>
-                    </Button>
-                  </div>
-                )}
 
                 {/* Gallery Tab */}
                 {activeTab === 'gallery' && (

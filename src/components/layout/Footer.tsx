@@ -5,14 +5,14 @@ const footerNavigation = {
   main: [
     { name: 'About Us', href: '/about' },
     { name: 'Programs', href: '/programs' },
-    { name: 'Donate', href: '/donate' },
+    // { name: 'Donate', href: '/donate' },
     // { name: 'News', href: '/news' },
     { name: 'Contact', href: '/contact' },
   ],
   programs: [
     { name: 'Emergency Relief', href: '/programs#emergency' },
-    { name: 'Education Support', href: '/programs#education' },
-    { name: 'Healthcare', href: '/programs#healthcare' },
+    { name: 'Islamic Education Support', href: '/programs#education' },
+    { name: 'Ramadan Support', href: '/programs#healthcare' },
     { name: 'Orphan Care', href: '/programs#orphan-care' },
     { name: 'Community Development', href: '/programs#community' },
   ],
@@ -164,13 +164,13 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-neutral-800">
+      <div className="border-t text-center border-neutral-800">
         <div className="container">
-          <div className="flex flex-col md:flex-row justify-between items-center py-6 space-y-4 md:space-y-0">
+          <div className="flex  flex-col md:flex-row justify-between items-center py-6 space-y-4 md:space-y-0">
             <div className="text-sm text-neutral-400">
               © {new Date().getFullYear()} An Noor Charity Foundation. All rights reserved.
             </div>
-            <div className="flex space-x-6 text-sm text-neutral-400">
+            {/* <div className="flex space-x-6 text-sm text-neutral-400">
               <Link to="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
               </Link>
@@ -180,7 +180,7 @@ export function Footer() {
               <Link to="/transparency" className="hover:text-white transition-colors">
                 Financial Transparency
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

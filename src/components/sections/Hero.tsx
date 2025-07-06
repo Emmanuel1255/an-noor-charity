@@ -40,14 +40,14 @@ export function Hero() {
 
             {/* Call to Action */}
             <div className="flex flex-col sm:flex-row gap-4 w-full">
-              <Button size="lg" variant="secondary">
+              {/* <Button size="lg" variant="secondary">
                 <Link to="/donate" className="group">
                   Donate Now
                   <Heart className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
                 </Link>
-              </Button>
-              <Button size="lg" variant="outline">
-                <Link to="/about" className="group bg-white/10 border-white/30 text-white hover:bg-white/20">
+              </Button> */}
+              <Button size="lg" variant="secondary">
+                <Link to="/about" className="group border-white/30 text-white">
                   Learn More
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -55,7 +55,7 @@ export function Hero() {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-white/20">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-white/20">
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-accent-400">500+</div>
                 <div className="text-sm text-blue-200">Families Helped</div>
@@ -68,7 +68,7 @@ export function Hero() {
                 <div className="text-2xl md:text-3xl font-bold text-accent-400">10+</div>
                 <div className="text-sm text-blue-200">Countries Served</div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Visual Content */}

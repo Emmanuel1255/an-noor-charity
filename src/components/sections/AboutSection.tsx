@@ -26,12 +26,12 @@ const features = [
   },
 ]
 
-const achievements = [
-  { label: 'Families Supported', value: '500+' },
-  { label: 'Children Educated', value: '200+' },
-  { label: 'Medical Treatments', value: '150+' },
-  { label: 'Emergency Responses', value: '50+' },
-]
+// const achievements = [
+//   { label: 'Families Supported', value: '500+' },
+//   { label: 'Children Educated', value: '200+' },
+//   { label: 'Medical Treatments', value: '150+' },
+//   { label: 'Emergency Responses', value: '50+' },
+// ]
 
 export function AboutSection() {
   return (
@@ -73,31 +73,8 @@ export function AboutSection() {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <CheckCircle className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-neutral-900 mb-2">Global Reach</h3>
-                  <p className="text-neutral-600">
-                    While based in Sierra Leone, our impact extends globally through partnerships 
-                    and direct aid programs in multiple countries.
-                  </p>
-                </div>
-              </div>
             </div>
 
-            {/* Statistics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-neutral-200">
-              {achievements.map((achievement, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-primary-600">
-                    {achievement.value}
-                  </div>
-                  <div className="text-sm text-neutral-600">
-                    {achievement.label}
-                  </div>
-                </div>
-              ))}
-            </div>
 
             <Button size="lg">
               <Link to="/about">

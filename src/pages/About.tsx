@@ -4,6 +4,7 @@ import { Mission } from '@/components/sections/about/Mission'
 import { Values } from '@/components/sections/about/Values'
 import { Leadership } from '@/components/sections/about/Leadership'
 import { Governance } from '@/components/sections/about/Governance'
+import { DonationCategories } from '@/components/sections/donate/DonationCategories'
 
 export function About() {
   return (
@@ -11,8 +12,9 @@ export function About() {
       <AboutHero />
       <Mission />
       <Values />
+      <DonationCategories />
       <Leadership />
-      <Governance />
+      {/* <Governance /> */}
       <Location />
     </>
   )

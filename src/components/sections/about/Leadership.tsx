@@ -1,10 +1,11 @@
-import { Users, Mail, Shield, Calculator, Megaphone, Search } from 'lucide-react'
+import { Users, Shield, Calculator, Megaphone, Search } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 
 const executivePositions = [
   {
     icon: Shield,
     title: 'Chief Executive Officer (CEO)',
+    name: 'Umarr Jalloh',
     description: 'Leads the organization and appoints meeting chairs. Provides strategic direction and overall leadership.',
     responsibilities: [
       'Strategic planning and organizational leadership',
@@ -59,24 +60,24 @@ const executivePositions = [
   }
 ]
 
-const governance = [
-  {
-    title: 'Democratic Election',
-    description: 'All executives except the CEO are elected by general membership in accordance with our constitution.'
-  },
-  {
-    title: 'Term Limits',
-    description: 'Executives serve terms and retire at the start of the second annual general meeting after appointment.'
-  },
-  {
-    title: 'Re-election Eligible',
-    description: 'Executives are eligible for re-election after their term in office, ensuring continuity and experience.'
-  },
-  {
-    title: 'Accountability',
-    description: 'Clear disqualification and removal procedures ensure executives remain accountable to the membership.'
-  }
-]
+// const governance = [
+//   {
+//     title: 'Democratic Election',
+//     description: 'All executives except the CEO are elected by general membership in accordance with our constitution.'
+//   },
+//   {
+//     title: 'Term Limits',
+//     description: 'Executives serve terms and retire at the start of the second annual general meeting after appointment.'
+//   },
+//   {
+//     title: 'Re-election Eligible',
+//     description: 'Executives are eligible for re-election after their term in office, ensuring continuity and experience.'
+//   },
+//   {
+//     title: 'Accountability',
+//     description: 'Clear disqualification and removal procedures ensure executives remain accountable to the membership.'
+//   }
+// ]
 
 export function Leadership() {
   return (
@@ -113,6 +114,11 @@ export function Leadership() {
                   <CardTitle className="text-lg text-neutral-900">
                     {position.title}
                   </CardTitle>
+                  {position.name && (
+                    <div className="text-primary-700 text-sm font-medium mt-1">
+                      {position.name}
+                    </div>
+                  )}
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-neutral-600 text-sm leading-relaxed">
@@ -139,7 +145,7 @@ export function Leadership() {
         </div>
 
         {/* Governance Principles */}
-        <div className="bg-primary-600 rounded-2xl p-8 md:p-12 text-white">
+        {/* <div className="bg-primary-600 rounded-2xl p-8 md:p-12 text-white">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
               Our Governance Principles
@@ -157,10 +163,10 @@ export function Leadership() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Constitutional Notice */}
-        <div className="mt-16 bg-white rounded-xl p-8 border border-neutral-200 shadow-sm">
+        {/* <div className="mt-16 bg-white rounded-xl p-8 border border-neutral-200 shadow-sm">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-4">
               <Mail className="w-8 h-8 text-primary-600" />
@@ -179,7 +185,7 @@ export function Leadership() {
               <p><strong>Contact:</strong> info@annoorcharity.org for more information</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

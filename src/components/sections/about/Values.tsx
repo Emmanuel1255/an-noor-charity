@@ -133,7 +133,7 @@ export function Values() {
         </div>
 
         {/* Operational Principles */}
-        <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm">
+        {/* <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-4">
               How We Apply These Values
@@ -161,7 +161,7 @@ export function Values() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Islamic Quote Section */}
         <div className="mt-16 text-center">
