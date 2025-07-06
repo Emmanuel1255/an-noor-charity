@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ScrollToTop from '@/components/ScrollToTop'
 import {Layout} from '@/components/layout/Layout'
 import {Home} from '@/pages/Home'
 import {About} from '@/pages/About'
@@ -12,6 +13,7 @@ import NotFound from '@/pages/NotFound'
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
